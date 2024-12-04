@@ -1,0 +1,44 @@
+// Smooth Scrolling
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+
+// Dark/Light Mode Toggle
+const themeToggle = document.getElementById('theme-toggle');
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+});
+
+// Interactive Timeline
+const timelineData = [
+  {
+    title: "Internship at XYZ Company",
+    date: "June 2023 - August 2023",
+    description: "Worked on developing data analytics pipelines and dashboards.",
+  },
+  {
+    title: "Bachelor's in Computer Science",
+    date: "2020 - Present",
+    description: "Specializing in Software Development and Data Analytics.",
+  },
+];
+
+const timelineContainer = document.querySelector('.timeline-container');
+
+timelineData.forEach(item => {
+  const timelineItem = document.createElement('div');
+  timelineItem.classList.add('timeline-item');
+  timelineItem.innerHTML = `
+    <div class="timeline-content">
+      <h3>${item.title}</h3>
+      <span>${item.date}</span>
+      <p>${item.description}</p>
+    </div>
+  `;
+  timelineContainer.appendChild(timelineItem);
+});
