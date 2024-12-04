@@ -20,8 +20,8 @@
 
   <main>
     <section id="about">
-      <h1>Hello, I'm [Your Name]</h1>
-      <p>A passionate student specializing in [Your Field].</p>
+      <h1>Hello, I'm Marshall Roberson </h1>
+      <p>A passionate student specializing in CyberSecurity and a student athlete asipiring to play porfessional basketball overseas.</p>
     </section>
 
     <section id="projects">
